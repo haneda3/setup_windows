@@ -1,0 +1,37 @@
+# Learn more: http://boxstarter.org/Learn/WebLauncher
+
+#---- TEMPORARY ---
+Disable-UAC
+
+#--- Fonts ---
+#choco install inconsolata
+  
+#--- Windows Settings ---
+# 可能な設定はここで確認 --> [Boxstarter WinConfig Features](http://boxstarter.org/WinConfig)
+Disable-GameBarTips
+
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
+Set-TaskbarOptions -Size Large -Dock Right -Combine Always -Lock
+
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1
+
+#--- Windows Subsystems/Features ---
+#choco install Microsoft-Hyper-V-All -source windowsFeatures
+#choco install Microsoft-Windows-Subsystem-Linux -source windowsfeatures
+#choco install containers -source windowsfeatures
+
+#--- Tools ---
+choco install git.install
+choco install 7zip
+
+#--- Apps ---
+choco install googlechrome
+choco install slack
+choco install visualstudiocode
+choco install evernote
+choco install vlc
+
+#--- Restore Temporary Settings ---
+Enable-UAC
+Enable-MicrosoftUpdate
+Install-WindowsUpdate -acceptEula
