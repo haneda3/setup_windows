@@ -7,3 +7,4 @@
 
 # 設定
 1. cloneして
+2. ChgKeyなりで```caps lockを右ctrl```へ変更
