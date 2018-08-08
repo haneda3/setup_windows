@@ -26,8 +26,11 @@
 <!v::Send ^v
 
 ; 右Alt + Up,Dowm => PgUp,Down
->!Up::Send {PgUp}
->!Down::Send {PgDn}
+;>!Up::Send {PgUp}
+;>!Down::Send {PgDn}
+; 右Shift + Up,Dowm => PgUp,Down
+>+Up::Send {PgUp}
+>+Down::Send {PgDn}
 
 ; TaskSwitch(Alt + Tab) to Ctrl + Tab
 ;LCtrl & Tab::AltTab
